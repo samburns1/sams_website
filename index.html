@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta 
+    name="viewport" 
+    content="width=device-width, initial-scale=1.0" />
+  <title>Home | sam burns</title>
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  
+  <!-- AOS CSS (Animate On Scroll) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar" data-aos="fade-down" data-aos-duration="800">
+    <div class="nav-brand">
+      <span>sam</span><span class="suffix"></span><span> burns</span>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="projects.html" class="active">home</a></li>
+      <li><a href="about.html">about me</a></li>
+      <li><a href="academics.html">academics</a></li>
+      <li><a href="projects.html">projects</a></li>
+      <li><a href="contact.html">contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header 
+    class="hero" 
+    style="background-image: url('../images/unitedandluft.png');"
+    data-aos="fade-in"
+    data-aos-duration="1500"
+  >
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>welcome</h1>
+        <p>i love planes and am an aerospace engineer at usc</p>
+        <a href="about.html" class="btn"><span>about me...</span></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section class="features" data-aos="fade-up" data-aos-duration="1000">
+    <div class="feature" data-aos="zoom-in" data-aos-delay="200">
+      <h2>work hard</h2>
+      <p>i've learned that engineering isn't easy, but my focus and dedication allow me to excel. </p>
+    </div>
+    <div class="feature" data-aos="zoom-in" data-aos-delay="400">
+      <h2>learn quick</h2>
+      <p>i can quickly pick up new skills and apply them in dynamic enviornments.</p>
+    </div>
+    <div class="feature" data-aos="zoom-in" data-aos-delay="600">
+      <h2>have fun</h2>
+      <p>balance is everything. that's why i am studying aerospace, i love it.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" data-aos="fade-up" data-aos-duration="800">
+    <p>&copy; 2024 sam burns. <a href="https://www.linkedin.com/in/samuelisaacburns/" target="_blank" class="linkedin-link">linkedin</a></p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-in-out',
+    });
+  </script>
+
+  <!-- Typing Animation Script -->
+  <script>
+  const suffixes = ['[uel]', '[my]'];
+  let currentSuffixIndex = 0;
+  let isDeleting = false;
+  let text = '';
+  let charIndex = 0;
+  
+  const suffixElement = document.querySelector('.nav-brand .suffix');
+  const typingDelay = 200;        // Speed of typing
+  const erasingDelay = 100;       // Speed of erasing
+  const pauseDelay = 4000;        // Long pause when empty (showing just "sam")
+  const completedDelay = 3000;    // Pause when word is complete (samuel/sammy)
+
+  function type() {
+    const currentSuffix = suffixes[currentSuffixIndex];
+    
+    if (isDeleting) {
+      text = currentSuffix.substring(0, charIndex - 1);
+      charIndex--;
+    } else {
+      text = currentSuffix.substring(0, charIndex + 1);
+      charIndex++;
+    }
+    
+    suffixElement.textContent = text;
+
+    if (!isDeleting && charIndex === currentSuffix.length) {
+      // Word is complete
+      isDeleting = true;
+      setTimeout(type, completedDelay);  // Pause on complete word
+      return;
+    }
+    
+    if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      currentSuffixIndex = (currentSuffixIndex + 1) % suffixes.length;
+      setTimeout(type, pauseDelay);  // Pause on empty (sam)
+      return;
+    }
+    
+    setTimeout(type, isDeleting ? erasingDelay : typingDelay);
+  }
+
+  // Start the typing animation when the page loads
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(type, pauseDelay);
+  });
+</script>
+</body>
+</html>

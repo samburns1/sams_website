@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta 
+    name="viewport" 
+    content="width=device-width, initial-scale=1.0" />
+  <title>Project 2 Details | My Modern Website</title>
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar" data-aos="fade-down" data-aos-duration="800">
+    <div class="nav-brand">[projects]</div>
+    <ul class="nav-menu">
+      <li><a href="index.html">home</a></li>
+      <li><a href="about.html">about me</a></li>
+      <li><a href="academics.html">academics</a></li>
+      <li><a href="projects.html" class="active">projects</a></li>
+      <li><a href="contact.html">contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Project Detail Section -->
+  <section class="project-detail" data-aos="fade-up" data-aos-duration="1000">
+    <div class="detail-content">
+      <div class="detail-image-container">
+        <img 
+          src="../images/bridge.png" 
+          alt="Project 1 Full Image" 
+          class="detail-image" />
+      </div>
+      <div class="detail-text">
+        <div>
+          <h2>bridge project</h2>
+          <p>
+            we designed and constructed a model bridge as part of a project to utilize structural mechanics and validate theoretical predictions with computational tools. 
+            using cad software, i developed a scaled and detailed design of our the bridge. using the model, we constructed the bridge from lightweight materials.
+            we calculated the forces acting on each member under a known load using statics principles, 
+            through finite element analysis i examined and verified stress points which alinged with hand caclulations.
+            the project highlighted the importance of both theoretical calculations paired with simulation tools. the project honed skills in structural analysis, 
+            cad modeling, fea, and hands-on construction.
+          </p>
+          <p><br></p>
+          <p>
+            <a href="../pdfs/bridge.pdf" target="_blank">check out the slides</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-text">
+      <h2>details</h2>
+      <ul>
+        <li>modeled bridge in cad to create a precise 3D model for structural analysis and construction.</li>
+        <li>determine forces in each bridge member under applied loads using method of joints.</li>
+        <li>performed ansys finite element analysis to verify hand calculated forces and analyze stress and deformation.</li>
+      </ul>
+    </div>
+
+    <div class="learnings-section">
+      <h2>what i learned</h2>
+      <ul>
+        <li> application of structural mechanics principles</li>
+        <li>use of CAD modeling with engineering analysis</li>
+        <li>FEA usage and result interpretation</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" data-aos="fade-up" data-aos-duration="800">
+     <p>&copy; 2024 sam burns. <a href="https://www.linkedin.com/in/samuelisaacburns/" target="_blank" class="linkedin-link">linkedin</a></p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-in-out',
+    });
+  </script>
+</body>
+</html>

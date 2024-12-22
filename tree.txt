@@ -1,0 +1,28 @@
+my-website/
+│
+├─ index.html         (Home)
+├─ about.html         (About Me)
+├─ projects.html      (Projects)
+├─ contact.html       (Contact)
+├─ project1.html      (Project #1 Details)
+├─ project2.html      (Project #2 Details)
+├─ project3.html      (Project #3 Details)
+│
+└─ css/
+   └─ style.css
+
+
+<h2>legs as deformable manipulators [ongoing]</h2>
+        <p>
+           the first phase of the project was finding a suitable enviornemnt to train the robot. this was a time consuming task, as we needed to find an MPC (model predictive control)
+          which would allow us to utilize a tripod stance freeing up one of the legs for manipulation. after several months of iterations, we settled on an MPC which runs in pybullet. 
+          the MPC was built for a different robot, which tasked us with tuning the MPC to our liking, so we could properly control the go2. the mpc is complex, but using llms,
+           i can quickly understand the code t a high level, and make changes without 
+        </p>
+
+        <h2>next steps</h2>
+        <ul>
+          <li>use supervised learning to train the go2 to move a rope</li>
+          <li></li>
+          <li>Feature Three: Brief explanation</li>
+        </ul>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta 
+    name="viewport" 
+    content="width=device-width, initial-scale=1.0" />
+  <title>Contact | My Modern Website</title>
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar" data-aos="fade-down" data-aos-duration="800">
+    <div class="nav-brand">[contact]</div>
+    <ul class="nav-menu">
+      <li><a href="index.html">home</a></li>
+      <li><a href="about.html">about me</a></li>
+      <li><a href="academics.html">academics</a></li>
+      <li><a href="projects.html">projects</a></li>
+      <li><a href="contact.html" class="active">contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contact Section -->
+  
+  <section class="contact-page" data-aos="fade-up" data-aos-duration="1000">
+  <div class="contact-hero" style="background-image: url('../images/stadium.png');">
+    <div class="hero-overlay">
+      <div class="contact-heading">
+        <h1>reach out!</h1>
+      </div>
+      
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/mjkkvggg"
+        method="POST"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <label for="name">name:</label>
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          required
+        />
+        
+        <label for="email">email:</label>
+        <input
+          type="email"
+          id="email"
+          name="_replyto"
+          required
+        />
+        
+        <label for="message">message:</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          required
+        ></textarea>
+        
+        <button type="submit" class="btn2"><span>submit</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="footer" data-aos="fade-up" data-aos-duration="800">
+    <p>&copy; 2024 sam burns. <a href="https://www.linkedin.com/in/samuelisaacburns/" target="_blank" class="linkedin-link">linkedin</a></p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-in-out',
+    });
+  </script>
+</body>
+</html>

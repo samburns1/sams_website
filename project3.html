@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta 
+   name="viewport" 
+   content="width=device-width, initial-scale=1.0" />
+ <title>Project 3 Details | My Modern Website</title>
+ 
+ <!-- Main CSS -->
+ <link rel="stylesheet" href="css/style.css" />
+ 
+ <!-- AOS CSS -->
+ <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+ <!-- Navigation Bar -->
+ <nav class="navbar" data-aos="fade-down" data-aos-duration="800">
+   <div class="nav-brand">[projects]</div>
+   <ul class="nav-menu">
+     <li><a href="index.html">home</a></li>
+     <li><a href="about.html">about me</a></li>
+     <li><a href="academics.html">academics</a></li>
+     <li><a href="projects.html" class="active">projects</a></li>
+     <li><a href="contact.html">contact</a></li>
+   </ul>
+ </nav>
+
+ <!-- Project Detail Section -->
+ <section class="project-detail" data-aos="fade-up" data-aos-duration="1000">
+   <div class="detail-content">
+     <div class="detail-image-container">
+       <img 
+         src="../images/dog.png" 
+         alt="Project 1 Full Image" 
+         class="detail-image" />
+     </div>
+     <div class="detail-text">
+       <div>
+         <h2>legs as deformable manipulators [ongoing]</h2>
+         <p>
+            the first phase of the project was finding a suitable enviornemnt to train the robot. this was a time consuming task, as we needed to find an MPC (model predictive control)
+           which would allow us to utilize a tripod stance freeing up one of the legs for manipulation. after several months of iterations, we settled on an MPC which runs in pybullet. 
+           the MPC was built for a different robot, which tasked us with tuning the MPC to our liking, so we could properly control the go2. the mpc is complex, but using llms,
+            i can quickly understand the code at a high level, and make changes without getting stuck on the nitty gritty cs work.
+         </p>
+         <p><br></p>
+          <p>
+            <a href="https://slurm-lab-usc.github.io/" target="_blank">check out the SLURM Lab</a>
+          </p>
+       </div>
+     </div>
+   </div>
+
+   <div class="detail-text">
+     <h2>next steps</h2>
+     <ul>
+       <li>use supervised learning to train the go2 to move a rope. the first simple goal is to train the go2 to walk to the rope, and then systematically push it to a new location.</li>
+       <li>more complex operations, like untangling a rope or folding clothes. </li>
+     </ul>
+   </div>
+
+   <div class="learnings-section">
+     <h2>what i've learned (so far)</h2>
+     <ul>
+       <li>setting up environemnts for robotics is a timely proccess. i have spent a long time in the terminal!</li>
+       <li>how to dynamically adapt to unfamilar enviornments</li>
+       <li>MPC fundamentals and implementation in robotics environments</li>
+       <li>control system tuning and optimization for specific use cases</li>
+     </ul>
+   </div>
+ </section>
+
+ <!-- Footer -->
+ <footer class="footer" data-aos="fade-up" data-aos-duration="800">
+    <p>&copy; 2024 sam burns. <a href="https://www.linkedin.com/in/samuelisaacburns/" target="_blank" class="linkedin-link">linkedin</a></p>
+ </footer>
+
+ <!-- AOS JS -->
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <script>
+   AOS.init({
+     duration: 1000,
+     once: true,
+     easing: 'ease-in-out',
+   });
+ </script>
+</body>
+</html>

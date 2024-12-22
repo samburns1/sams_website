@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta 
+    name="viewport" 
+    content="width=device-width, initial-scale=1.0" />
+  <title>Project 1 Details | My Modern Website</title>
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar" data-aos="fade-down" data-aos-duration="800">
+    <div class="nav-brand">[projects]</div>
+    <ul class="nav-menu">
+      <li><a href="index.html">home</a></li>
+      <li><a href="about.html">about me</a></li>
+      <li><a href="academics.html">academics</a></li>
+      <li><a href="projects.html" class="active">projects</a></li>
+      <li><a href="contact.html">contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Project Detail Section -->
+  <section class="project-detail" data-aos="fade-up" data-aos-duration="1000">
+    <div class="detail-content">
+      <div class="detail-image-container">
+        <img 
+          src="../images/glider.png" 
+          alt="Project 1 Full Image" 
+          class="detail-image" />
+      </div>
+      <div class="detail-text">
+        <div>
+          <h2>glider project & report</h2>
+          <p>
+            we built a small glider called "checkmate" to compare aerodynamic theory with real-world flight data. 
+            we used MIT's xfoil to gather airfoil properties, modeled everything the glider in cad cad, and crafted our prototype. with a launch rig and structured data collection, 
+            we evaluated how our theoretical performance with actual flight behavior.
+            by analyzing factors like stalls, center of mass shifts, and unexpected drag contributions, we analyzed our assumptions and compiled a detailed report on our findings. 
+            this project sharpened and tests skills in computational modeling, fabrication, data analysis, and clear technical communication.
+          </p>
+          <p><br></p>
+          <p>
+            <a href="../pdfs/GliderReport.pdf" target="_blank">read the report here</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-text" >
+      <h2>details</h2>
+      <ul>
+        <li>constructed and optimized a glider oriented around the 6412 NACA airfoil; analyzing flight characteristics using MATLAB</li>
+        <li>modeled basic flight performance up to 25 m/s and tested glider up to 12 m/s</li>
+        <li>created a report explaining over 300% divergence from theory; highlighted several potential causes of deviation and likelihoods</li>
+      </ul>
+    </div>
+
+    <div class="learnings-section">
+      <h2>what i learned</h2>
+      <ul>
+        <li>applications of aerodynamic theory</li>
+        <li>data collection and analysis methods for physical experiments</li>
+        <li>technical report writing and documentation skills</li>
+        <li>analysis of theoretical vs experimental results</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" data-aos="fade-up" data-aos-duration="800">
+    <p>&copy; 2024 sam burns. <a href="https://www.linkedin.com/in/samuelisaacburns/" target="_blank" class="linkedin-link">linkedin</a></p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-in-out',
+    });
+  </script>
+</body>
+</html>
