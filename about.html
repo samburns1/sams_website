@@ -2,19 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta 
-    name="viewport" 
-    content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me</title>
   
-  <!-- Main CSS -->
   <link rel="stylesheet" href="css/style.css" />
-  
-  <!-- AOS CSS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-  <!-- Navigation Bar -->
+  <!-- Navigation stays the same -->
   <nav class="navbar" data-aos="fade-down" data-aos-duration="800">
     <div class="nav-brand">[about me]</div>
     <ul class="nav-menu">
@@ -27,62 +22,149 @@
   </nav>
 
   <!-- About Page Content -->
-  <section class="about-page" data-aos="fade-up" data-aos-duration="1000">
-    <div class="about-content">
-      <img 
-        src="../images/hawaii2.png" 
-        alt="Profile Picture" 
-        class="profile-pic"
-        data-aos="flip-left"
-        data-aos-delay="200"
-      />
-      <div class="about-text" data-aos="fade-left" data-aos-delay="200">
-        <h2>hi. im sammy, but i also go by sam. or samuel too</h2>
-         
-        <p>
-         if you somehow missed it, i love planes, and if you are around me enough, you'll notice i'm usually staring up. the la aerospace keeps me busy.
-         my current favorite plane is the a350. </p>
-        <p><br></p>
-        <p>
-         aside from aerospace, i am super interested in other facets of engineering. im an ai optimist, and its use cases and applications excite me. 
-         ai allows me to expand out of my areas of expertice, creating an opportunity to rapidly absorb new information.
-         i am a quick learner, which pairs well with my passion to learn and create. llms let me do more, and i firmly believe that understanding how to use them as a learning supplement is a critical skillset, 
-         especially in times where tech is advancing at such a rapid rate. we need to keep up somehow!
-        </p>
-        <p><br></p>
-        <p>
-        although planes got me started, my experience as an undergrad has made me realize i am still finding my niche. from fluids to robotics, there is so much to explore, and i am grateful/thrilled for opportunities to learn.
-        </p>
-        <p><br></p>
-        <p>
-        i promise though, planes aren't my whole personality *i hope. i love to explore and stay busy.  
-        la has been a great stomping ground the last few years and its food really sticks out. my girlfriend got me hooked on sushi, and luckily la has no shortage of good salmon. 
-        we have been trying all the food around here and rating them on beli (@madlads). 
-        sports/exercise are also a major part of my life. i played competetive soccer for 15+ years and force myself to go to the gym. 
-        i play/watch a lot of baskegball, but unfortunately im very average height otherwise i would have played more. 
-        la has great sports culture and there is never a shortage of local games to put on tv. there is literally 4 major sports stadiums within a 2 miles radius of my apartment. 
-        sadly usc sports tends to disappoint. we beat ucla this year which was a 10/10 experience. very redeeming.
-        
+  <section class="about-page">
+    <div class="two-column-layout">
+      
+      <!-- Top Photos Row -->
+      <div class="images-column-top">
         <img 
-        src="../images/uscvsucla.png" 
-        alt="Beat UCLA" 
-        class="beat-ucla"
-        data-aos="flip-left"
-        data-aos-delay="200"
-      />
- 
-        
+          src="../images/hawaii2.png"
+          alt="Profile Picture"
+          class="about-image"
+          data-aos="zoom-in"
+          data-aos-duration="800"
+        />
 
+        <img 
+          src="../images/gf.png"
+          alt="With Girlfriend"
+          class="about-image"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        />
 
-        
+        <img 
+          src="../images/soccer.jpeg"
+          alt="United Airlines"
+          class="about-image"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        />
 
+        <img 
+          src="../images/uscvsucla.png"
+          alt="Beat UCLA"
+          class="about-image"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        />
+
+         <img 
+          src="../images/falls.png"
+          alt="Beat UCLA"
+          class="about-image"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        />
+
+        <img 
+          src="../images/tracks.png"
+          alt="Additional Photo"
+          class="about-image"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        />
       </div>
+
+      <!-- Middle Text Column -->
+      <div class="text-column">
+        <h2>hi. im sammy, but i also go by sam. or samuel too</h2>
+        
+        <p>if you somehow missed it, i love planes, and if you are around me enough, you'll notice i'm usually staring up.
+        the la aerospace keeps me busy. my current favorite plane is the a350.</p>
+
+        <p>aside from aerospace, i am super interested in other facets of engineering. i love ai and its use cases
+        and applications excite me. ai allows me to expand out of my areas of expertice, creating an opportunity to rapidly
+        absorb new information. i am a quick learner, which pairs well with my passion to learn and create.</p>
+
+        <p>i firmly believe that understanding how to use LLMS as a learning supplement is a critical skillset,
+        especially in times where tech is advancing at such a rapid rate. we need to keep up somehow!</p>
+
+        <p>although planes got me started, my experience as an undergrad has made me realize i am still finding my niche.
+        from fluids to robotics, there is so much to explore, and i am grateful/thrilled for opportunities to learn.</p>
+
+        <p>i promise though, planes aren't my whole personality *i hope. i love to explore and stay busy. 
+        la has been a great stomping ground the last few years and its food really sticks out. 
+        my girlfriend got me hooked on sushi, and luckily la has no shortage of good salmon.
+        we have been trying all the food around here and rating them on beli (@madlads).</p>
+
+        <p>sports/exercise are also a major part of my life. i played competetive soccer for 15+ years and force myself to go to the gym.
+        i play/watch a lot of basketball, but unfortunately im very average height otherwise i would have played more.
+        la has great sports culture and there is never a shortage of local games to put on tv.
+        there is literally 4 major sports stadiums within a 2 miles radius of my apartment.
+        sadly usc sports tends to disappoint. we beat ucla this year which was a 10/10 experience. very redeeming.</p>
+      </div>
+
+      <!-- Bottom Photos Row -->
+      <div class="images-column-bottom">
+        <img 
+          src="../images/pizza.png"
+          alt="Pizza"
+          class="about-image"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        />
+
+        <img 
+          src="../images/chase.png"
+          alt="Rio & Pica"
+          class="about-image"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        />
+
+        <img 
+          src="../images/frens.png"
+          alt="Friends"
+          class="about-image"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        />
+
+        <img 
+          src="../images/folt.png"
+          alt="Folt"
+          class="about-image"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        />
+
+        <img 
+          src="../images/sushi2.png"
+          alt="Sushi"
+          class="about-image"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        />
+        <img 
+          src="../images/rioandpica.png"
+          alt="soccer"
+          class="about-image"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        />
+      </div>
+
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer stays the same -->
   <footer class="footer" data-aos="fade-up" data-aos-duration="800">
-    <p>&copy; 2024 sam burns. <a href="https://www.linkedin.com/in/samuelisaacburns/" target="_blank" class="linkedin-link">linkedin</a></p>
+    <p>&copy; 2024 sam burns. 
+       <a href="https://www.linkedin.com/in/samuelisaacburns/" target="_blank" class="linkedin-link">
+         linkedin
+       </a>
+    </p>
   </footer>
 
   <!-- AOS JS -->

@@ -1,4 +1,6 @@
-/* Basic Reset & Fonts */
+/* -------------------------------------------------------------
+   1. Basic Reset & Global Fonts
+-------------------------------------------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -17,10 +19,13 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, .nav-brand {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+               "Helvetica Neue", Arial, sans-serif;
 }
 
-/* Navigation */
+/* -------------------------------------------------------------
+   2. Navigation
+-------------------------------------------------------------- */
 .navbar {
   display: flex;
   align-items: center;
@@ -74,7 +79,9 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
   color: #666;
 }
 
-/* Hero Section */
+/* -------------------------------------------------------------
+   3. Hero Section
+-------------------------------------------------------------- */
 .hero {
   position: relative;
   color: #fff;
@@ -114,7 +121,9 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
   font-family: Georgia, Times, "Times New Roman", serif;
 }
 
-/* Buttons */
+/* -------------------------------------------------------------
+   4. Buttons
+-------------------------------------------------------------- */
 .btn {
   display: inline-block;
   padding: .25rem 5rem;
@@ -135,7 +144,7 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
 .btn::before {
   content: '';
   position: absolute;
-  top: 0;
+  top: 0; 
   left: 0;
   right: 0;
   bottom: 0;
@@ -156,7 +165,9 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
   transform: translateY(-2px);
 }
 
-/* Features Section */
+/* -------------------------------------------------------------
+   5. Features Section
+-------------------------------------------------------------- */
 .features {
   display: flex;
   flex-wrap: wrap;
@@ -191,56 +202,53 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
   color: #555;
 }
 
-/* About Page */
+/* -------------------------------------------------------------
+   6. ABOUT PAGE
+-------------------------------------------------------------- */
+
 .about-page {
   max-width: 1200px;
   margin: 4rem auto;
   padding: 2rem;
 }
 
-.about-heading {
-  text-align: center;
-  margin-bottom: 2rem;
+/* We'll stack the top images, text, and bottom images vertically */
+.two-column-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.about-heading h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.about-heading p {
-  color: #555;
-}
-
-.about-content {
+/* Top & Bottom images: wrap them in a row, or multi-row if needed */
+.images-column-top,
+.images-column-bottom {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  align-items: center;
-  margin-top: 2rem;
+  gap: 1rem;
+  justify-content: center;
 }
 
-.profile-pic {
-  flex: 1 1 300px;
-  max-width: 400px;
-  border-radius: 10%;
-  object-fit: cover;
+/* Center the text column and limit its width */
+.text-column {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.beat-ucla {
-  height: 7em;  
-  border-radius: 10%;
-  float: right;
-  margin-left: 1em;
-  margin-right: 2em;
-  margin-bottom: 1em;
+/* Make each image a uniform size or let them flow naturally */
+.about-image {
+  width: 300px;      /* adjust as you like (or set max-width instead) */
+  height: auto;
+  object-fit: cover; /* ensures the image crops nicely */
+  display: block;
+  border-radius: 10px;
 }
 
-.about-text {
-  flex: 2;
-}
 
-/* Projects Page */
+
+
+/* -------------------------------------------------------------
+   7. Projects Page
+-------------------------------------------------------------- */
 .projects-page {
   max-width: 1200px;
   margin: 4rem auto;
@@ -307,7 +315,9 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
   display: inline-block;
 }
 
-/* Contact Page */
+/* -------------------------------------------------------------
+   8. Contact Page
+-------------------------------------------------------------- */
 .contact-page {
   max-width: 800px;
   margin: 4rem auto;
@@ -351,7 +361,9 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
   margin-top: 1rem;
 }
 
-/* Footer */
+/* -------------------------------------------------------------
+   9. Footer
+-------------------------------------------------------------- */
 .footer {
   text-align: center;
   padding: 2rem;
@@ -362,7 +374,9 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
   color: #666;
 }
 
-/* Project Detail Pages */
+/* -------------------------------------------------------------
+   10. Project Detail Pages
+-------------------------------------------------------------- */
 .project-detail {
   max-width: 1200px;
   margin: 4rem auto;
@@ -393,7 +407,7 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
 
 .detail-text h2 {
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;  /* Reduced from 1rem to 0.5rem */
+  margin-bottom: 0.5rem;
 }
 
 .detail-text p,
@@ -404,7 +418,7 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
 
 .detail-text ul {
   padding-left: 1.5rem;
-  margin-top: 0;  /* Added to remove space after heading */
+  margin-top: 0;
 }
 
 .detail-text a {
@@ -456,7 +470,9 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
   }
 }
 
-/* Academics Page */
+/* -------------------------------------------------------------
+   11. Academics Page
+-------------------------------------------------------------- */
 .academics-page {
   max-width: 1200px;
   margin: 4rem auto;
@@ -474,16 +490,16 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
   color: #fff;
   background-size: cover;
   background-position: center;
-  height: 400px;  /* Fixed height */
+  height: 400px;
   border-radius: 6px;
-  margin-bottom: 3rem;  /* Space after hero section */
+  margin-bottom: 3rem;
 }
 
 .hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; 
+  left: 0; 
+  right: 0; 
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 6px;
@@ -533,7 +549,7 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
 
 /* Coursework Section */
 .academics-section {
-  margin-bottom: 3rem;  /* Space between sections */
+  margin-bottom: 3rem;
 }
 
 .academics-section h2 {
@@ -563,6 +579,7 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
   color: #666;
   font-style: italic;
 }
+
 /* Coursework Hero Section */
 .coursework-hero {
   position: relative;
@@ -619,21 +636,40 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
   color: #003366;
 }
 
-/* Mobile Responsiveness */
+/* -------------------------------------------------------------
+   12. Mobile Responsiveness for Academics Hero
+-------------------------------------------------------------- */
 @media (max-width: 768px) {
   .academics-page {
     padding: 2rem;
   }
   
   .education-hero {
-    height: 500px;  /* More height on mobile for content */
+    height: 500px;
   }
   
   .hero-overlay {
     padding: 2rem 1rem;
   }
+
+  /* On mobile, stack the first row columns */
+  .row:first-of-type {
+    flex-direction: column;
+    height: auto; /* let them grow naturally */
+  }
+  .row:first-of-type .photos,
+  .row:first-of-type .text-block {
+    width: 100%;
+    height: auto;
+  }
+  .profile-pic {
+    height: auto;
+  }
 }
 
+/* -------------------------------------------------------------
+   13. LinkedIn Hover Color
+-------------------------------------------------------------- */
 .linkedin-link {
   color: #666;
   text-decoration: underline;
@@ -644,6 +680,9 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
   color: #0077b5;  /* LinkedIn blue color */
 }
 
+/* -------------------------------------------------------------
+   14. .btn2 Variation
+-------------------------------------------------------------- */
 .btn2 {
   display: inline-block;
   padding: 1rem 4rem;
@@ -664,7 +703,7 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
 .btn2::before {
   content: '';
   position: absolute;
-  top: 0;
+  top: 0; 
   left: 0;
   right: 0;
   bottom: 0;
@@ -684,19 +723,19 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
   transform: translateY(2px);
 }
 
-/* Contact Hero */
-
+/* -------------------------------------------------------------
+   15. Contact Hero
+-------------------------------------------------------------- */
 .contact-hero {
   position: relative;
   color: #fff;
   background-size: cover;
   background-position: center;
-  height: 600px;  /* Increase or decrease to your liking */
+  height: 600px;
   border-radius: 10px;
   margin-bottom: 3rem;
 }
 
-/* Dark overlay on top of background image */
 .contact-hero .hero-overlay {
   position: absolute;
   inset: 0;
@@ -704,30 +743,27 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;      /* center vertically */
-  align-items: center;         /* center horizontally */
+  justify-content: center;
+  align-items: center;
   padding: 2rem;
 }
 
-/* Centered, narrower form */
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   width: 100%;
-  max-width: 400px;            /* limit form width */
-  background-color: rgba(255, 255, 255, 0.1); /* optional translucent box */
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 1.5rem;
   border-radius: 8px;
 }
 
-/* Make labels more visible on dark overlay */
 .contact-form label {
   color: #fff;
   font-weight: 500;
 }
 
-/* Inputs & textarea with a consistent style */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
