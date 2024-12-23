@@ -126,14 +126,14 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
 -------------------------------------------------------------- */
 .btn {
   display: inline-block;
-  padding: .25rem 5rem;
-  min-width: 150px;
+  padding: .55rem 2.5rem;
+  min-width: 75px;
   text-decoration: none;
   border-radius: 4px;
   font-weight: 500;
   font-family: Georgia, Times, "Times New Roman", serif;
   color: #fff;
-  background-image: url('../images/a350.jpg');
+  background-image: url('../images/f35.png');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -149,7 +149,7 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
   right: 0;
   bottom: 0;
   background: rgba(0,0,0,0.4);
-  border-radius: 2px;
+  border-radius: 4px;
   z-index: 1;
 }
 
@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
   position: relative;
   z-index: 2;
   display: inline-block; 
-  transform: translateX(75px);
+  transform: translateX(25px);
 }
 
 .btn:hover {
@@ -772,5 +772,9 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
   border-radius: 4px;
   font-size: 1rem;
   color: #333;
+}
+
+.text-column p {
+  margin-bottom: 1em; /* Adjust the 1.5em to whatever spacing you want */
 }
 
