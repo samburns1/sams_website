@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta 
+    name="viewport" 
+    content="width=device-width, initial-scale=1.0" />
+  <title>deep q-learning: plane descent</title>
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar" data-aos="fade-down" data-aos-duration="800">
+    <div class="nav-brand">[projects]</div>
+    <ul class="nav-menu">
+      <li><a href="index.html">home</a></li>
+      <li><a href="about.html">about me</a></li>
+      <li><a href="academics.html">academics</a></li>
+      <li><a href="projects.html" class="active">projects</a></li>
+      <li><a href="contact.html">contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Project Detail Section -->
+  <section class="project-detail" data-aos="fade-up" data-aos-duration="1000">
+    <div class="detail-content">
+      <div class="detail-image-container">
+        <a href="projects.html" class="video-link2">
+          <div class="video-container-2">
+            <video autoplay loop muted playsinline>
+              <source src="../videos/landing.mp4" type="video/mp4">
+              your browser does not support the video tag.
+            </video>
+          </div>
+        </a>
+        <a href="projects.html" class="video-link2">
+          <div class="video-container-2">
+            <video autoplay loop muted playsinline>
+              <source src="../videos/legacyruns.mp4" type="video/mp4">
+              your browser does not support the video tag.
+            </video>
+          </div>
+        </a>
+      </div>
+      <div class="detail-text">
+        <div>
+          <h2>deep q-learning: plane descent</h2>
+          <p>
+            this project explores how different hyperparameters affect deep q-learning performance through systematic experimentation. 
+            using a custom gymnasium environment simulating aircraft descent, i investigated the complex relationships between batch size, 
+            learning rate, discount factor, and exploration strategies.
+          </p>
+          <p>
+            the neural network architecture consisted of an input layer, two hidden layers (256 neurons each), and an output layer, 
+            utilizing relu activation functions. this setup enabled the agent to learn control policies for managing descent rate, 
+            angle, and positioning while maintaining stability throughout the landing sequence. check out the full 19-page study below.
+          </p>
+          <p>
+            <a href="../pdfs/learningparams.pdf" target="_blank" rel="noopener noreferrer">
+              full study<img 
+                src="../images/3d98_32.png" 
+                alt="pdf icon" 
+                class="pdf-icon">
+              <img 
+                src="../images/3d98_64.png" 
+                alt="pdf icon" 
+                class="pdf-icon">
+              <img 
+                src="../images/3d995_64.png" 
+                alt="pdf icon" 
+                class="pdf-icon">
+              <img 
+                src="../images/3d995_32.png" 
+                alt="pdf icon" 
+                class="pdf-icon">
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-text">
+      <h2>details</h2>
+      <ul>
+        <li>
+          <strong>developed a custom gymnasium environment:</strong> 
+          modeled a basic aircraft descent and implemented reward shaping to simulate realistic landing scenarios.
+        </li>
+        <li>
+          <strong>conducted comprehensive parameter studies across:</strong> 
+          <ul>
+            <li>batch sizes (32 and 64)</li> 
+            <li>learning rates (&alpha;): 1×10<sup>-4</sup>, 5×10<sup>-4</sup>, 1×10<sup>-3</sup></li>
+            <li>discount factors (&gamma;): 0.999, 0.990, 0.950</li>
+            <li>&epsilon;-decay rate: 0.995, 0.980</li>
+          </ul>
+        </li>
+        <li>
+          <strong>analyzed stability-performance trade-offs:</strong> 
+          utilized surface plots and statistical analysis to evaluate how different hyperparameters influence model stability and performance.
+        </li>
+        <li>
+          <strong>identified optimal parameter combinations:</strong> 
+          conducted extensive parameter optimization to determine the most effective combinations, achieving impressive performance scores of up to <strong>397.88 points</strong>. (displayed in the top video)
+        </li>
+        <li>
+          <strong>discovered distinct failure modes and stability regions:</strong> 
+          performed in-depth analysis to uncover unique failure modes and delineate stability regions across different batch sizes. these findings provided critical insights into model behavior, enabling the development of more robust and reliable systems by tailoring batch size configurations to specific operational conditions.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Learnings Section -->
+  <section class="learnings-section2">
+    <h2>what i learned</h2>
+    <ul>
+      <li><strong>deep q-learning implementation and optimization:</strong> gained hands-on experience in implementing deep q-learning algorithms and optimizing their performance through hyperparameter tuning.</li>
+      <li><strong>hyperparameter tuning and its impact on learning dynamics:</strong> learned how different hyperparameters influence the learning process, including convergence rates and stability of the learning agent.</li>
+      <li><strong>batch size effects on gradient estimation and learning stability:</strong> understood how varying batch sizes affect gradient estimation accuracy and the overall stability of the learning process.</li>
+      <li><strong>statistical analysis and visualization of experimental results:</strong> developed skills in analyzing experimental data using statistical methods and presenting findings through effective visualizations.</li>
+      <li><strong>reward shaping (frustrating!!!) strategies for control tasks:</strong> explored techniques for designing reward functions that guide the agent towards desired behaviors in control environments. even for such a simple task it took a long time to find the sweet spot. failure is apart of the process, and it took many iterations to converge on rewards that did not break every law of physics, while also landing properly.</li>
+    </ul>
+
+    
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" data-aos="fade-up" data-aos-duration="800">
+    <p>&copy; 2024 sam burns. <a href="https://www.linkedin.com/in/samuelisaacburns/" target="_blank" rel="noopener noreferrer" class="linkedin-link">linkedin</a></p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-in-out',
+    });
+  </script>
+</body>
+</html>

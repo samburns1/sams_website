@@ -108,16 +108,16 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: .75rem;
   letter-spacing: 1px;
   font-family: Georgia, Times, "Times New Roman", serif;
 }
 
 .hero-content p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  line-height: 1.4;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  line-height: .01;
   font-family: Georgia, Times, "Times New Roman", serif;
 }
 
@@ -139,6 +139,7 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
   position: relative;
   transition: transform 0.3s;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+   margin-bottom: 4rem;
 }
 
 .btn::before {
@@ -271,7 +272,7 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
   gap: 2rem;
 }
 
@@ -403,6 +404,7 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
 .detail-text {
   display: flex;
   flex-direction: column;
+
 }
 
 .detail-text h2 {
@@ -423,7 +425,7 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
 
 .detail-text a {
   color: #0066cc;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .detail-text a:hover {
@@ -450,6 +452,48 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
 }
 
 .learnings-section li {
+  color: #555;
+  line-height: 1.6;
+  break-inside: avoid;
+}
+
+@media (max-width: 768px) {
+  .detail-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .detail-image-container {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .learnings-section ul {
+    columns: 1;
+  }
+}
+
+/* Learning Section 2*/
+.learnings-section2 {
+  padding-right: 3rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+  width: 100%;
+}
+
+.learnings-section2 h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-left:3rem;
+}
+
+.learnings-section2 ul {
+margin-left:5rem;
+  columns: 2;
+  column-gap: 3rem;
+}
+
+.learnings-section2 li {
   color: #555;
   line-height: 1.6;
   break-inside: avoid;
@@ -778,3 +822,138 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
   margin-bottom: 1em; /* Adjust the 1.5em to whatever spacing you want */
 }
 
+
+.video-section {
+  margin: rem 0;
+  text-align: center;
+}
+
+.video-section h2 {
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.video-container {
+  width: 100%;
+  max-width:400px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+
+  }
+  50% {
+    transform: scale(1.06);
+
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.video-link {
+  display: block;
+  text-decoration: none;
+  animation: pulse 5s infinite ease-in-out;
+}
+
+.video-link:hover {
+  animation: none;
+  transform: scale(1.02);
+}
+
+.video-container {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.video-link:hover .video-container {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+.video-container-2 {
+  width: 100%;
+  max-width:1000px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  margin-top: 2rem;
+
+}
+
+.video-container-2 video {
+  width: 100%;
+  height: 300%;
+  display: block;
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+
+  }
+  50% {
+    transform: scale(1.06);
+
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.video-link {
+  display: block;
+  text-decoration: none;
+  animation: pulse 5s infinite ease-in-out;
+}
+
+.video-link:hover {
+  animation: none;
+  transform: scale(1.02);
+}
+
+.video-container {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.video-link:hover .video-container {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+}
+
+/* pdf icons */
+.pdf-icon {
+  width: 110px;
+  height: 80px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
