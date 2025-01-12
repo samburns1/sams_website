@@ -247,9 +247,7 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
 
 
 
-/* -------------------------------------------------------------
-   7. Projects Page
--------------------------------------------------------------- */
+/* 7. Projects Page */
 .projects-page {
   max-width: 1200px;
   margin: 4rem auto;
@@ -272,8 +270,11 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 2rem; /* Adjusted gap */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 .project-card {
@@ -282,6 +283,8 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
   border-radius: 6px;
   overflow: hidden;
   transition: box-shadow 0.3s;
+  padding: 1rem; /* Added padding */
+  text-align: center; /* Center content */
 }
 
 .project-card:hover {
@@ -289,8 +292,13 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
 }
 
 .project-card img {
-  width: 100%;
+  width: 80%; /* Smaller width */
+  max-width: 200px; /* Optional max width */
+  height: auto;
   display: block;
+  margin: 1rem auto; /* Centered with spacing */
+  border-radius: 4px;
+  object-fit: cover;
   transition: transform 0.3s;
 }
 
@@ -300,7 +308,7 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
 
 .project-card h2 {
   font-size: 1.25rem;
-  margin: 1rem;
+  margin: 1rem 0;
 }
 
 .project-card p {
@@ -314,6 +322,20 @@ h1, h2, h3, h4, h5, h6, .nav-brand {
   font-weight: 500;
   margin: 0 1rem 1rem 1rem;
   display: inline-block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* Single column on small screens */
+    gap: 1.5rem; /* Reduced gap */
+  }
+
+  .project-card img {
+    width: 90%; /* Slightly larger on small screens */
+    max-width: 250px; /* Increased max width */
+  }
+
 }
 
 /* -------------------------------------------------------------
