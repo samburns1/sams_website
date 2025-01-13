@@ -34,7 +34,7 @@
           <div class="video-container-2">
             <video autoplay loop muted playsinline>
               <source src="../videos/landing.mp4" type="video/mp4">
-              your browser does not support the video tag.
+              Your browser does not support the video tag.
             </video>
           </div>
         </a>
@@ -42,27 +42,27 @@
           <div class="video-container-2">
             <video autoplay loop muted playsinline>
               <source src="../videos/legacyruns.mp4" type="video/mp4">
-              your browser does not support the video tag.
+              Your browser does not support the video tag.
             </video>
           </div>
         </a>
       </div>
       <div class="detail-text">
         <div>
-          <h2>deep q-learning: plane descent</h2>
+          <h2>Deep Q-Learning: Plane Descent</h2>
           <p>
-            this project explores how different hyperparameters affect deep q-learning performance through systematic experimentation. 
-            using a custom gymnasium environment simulating aircraft descent, i investigated the complex relationships between batch size, 
+            This project explores how different hyperparameters affect eep q-learning performance through systematic experimentation. 
+            using a custom gymnasium environment simulating aircraft descent, I investigated the complex relationships between batch size, 
             learning rate, discount factor, and exploration strategies.
           </p>
           <p>
-            the neural network architecture consisted of an input layer, 3 hidden layers (256 neurons each), and an output layer, 
-            utilizing relu activation functions. this setup enabled the agent to learn control policies for managing descent rate, 
-            angle, and positioning while maintaining stability throughout the landing sequence. check out the full 19-page study below.
+            The neural network architecture consisted of an input layer, 3 hidden layers (256 neurons each), and an output layer, 
+            utilizing ReLu activation functions. this setup enabled the agent to learn control policies for managing descent rate, 
+            angle, and positioning while maintaining stability throughout the landing sequence. Check out the full 19-page study below.
           </p>
           <p>
             <a href="../pdfs/learningparams.pdf" target="_blank" rel="noopener noreferrer">
-              full study<img 
+              Full Study<img 
                 src="../images/3d98_32.png" 
                 alt="pdf icon" 
                 class="pdf-icon">
@@ -85,14 +85,16 @@
     </div>
 
     <div class="detail-text">
-      <h2>details</h2>
+      <h2>Details</h2>
       <ul>
         <li>
-          <strong>developed a custom gymnasium environment:</strong> 
-          modeled a basic aircraft descent and implemented reward shaping to simulate realistic landing scenarios.
+          <strong>Developed a custom gymnasium environment:</strong> 
+          <ul>
+        <li>Designed a custom gymnasium environment for aircraft descent simulation with physics-based reward shaping</li>
+        </ul>
         </li>
         <li>
-          <strong>conducted comprehensive parameter studies across:</strong> 
+          <strong>Conducted comprehensive parameter studies across:</strong> 
           <ul>
             <li>batch sizes (32 and 64)</li> 
             <li>learning rates (&alpha;): 1×10<sup>-4</sup>, 5×10<sup>-4</sup>, 1×10<sup>-3</sup></li>
@@ -101,30 +103,36 @@
           </ul>
         </li>
         <li>
-          <strong>analyzed stability-performance trade-offs:</strong> 
-          utilized surface plots and statistical analysis to evaluate how different hyperparameters influence model stability and performance.
+          <strong>Analyzed stability-performance trade-offs:</strong> 
+         <ul>
+          <li>Utilized surface plots and statistical analysis to evaluate how different hyperparameters influence model stability and performance.</li>
+          </ul>
         </li>
         <li>
-          <strong>identified optimal parameter combinations:</strong> 
-          conducted extensive parameter optimization to determine the most effective combinations, achieving impressive performance scores of up to <strong>397.88 points</strong>. (displayed in the top video)
-        </li>
-        <li>
-          <strong>discovered distinct failure modes and stability regions:</strong> 
-          performed in-depth analysis to uncover unique failure modes and delineate stability regions across different batch sizes. these findings provided critical insights into model behavior, enabling the development of more robust and reliable systems by tailoring batch size configurations to specific operational conditions.
-        </li>
+          <strong>Optimal parameter combinations:</strong>
+          <ul>
+        <li>Conducted parameter analysis (batch sizes, learning/decay rates, discount factors) to realize stability and performance trade-offs </li>
+        <li>Identified a configuration performing 51% above average (397.9 vs 263.5) displaying the significance of parameter selection (displayed in the top video)</li>
+        </ul>
+      </li>
       </ul>
     </div>
   </section>
 
+  
+
+
+
+
   <!-- Learnings Section -->
   <section class="learnings-section2">
-    <h2>what i learned</h2>
+    <h2>What I learned</h2>
     <ul>
-      <li><strong>deep q-learning implementation and optimization:</strong> gained hands-on experience in implementing deep q-learning algorithms and optimizing their performance through hyperparameter tuning.</li>
-      <li><strong>hyperparameter tuning and its impact on learning dynamics:</strong> learned how different hyperparameters influence the learning process, including convergence rates and stability of the learning agent.</li>
-      <li><strong>batch size effects on gradient estimation and learning stability:</strong> understood how varying batch sizes affect gradient estimation accuracy and the overall stability of the learning process.</li>
-      <li><strong>statistical analysis and visualization of experimental results:</strong> developed skills in analyzing experimental data using statistical methods and presenting findings through effective visualizations.</li>
-      <li><strong>reward shaping (frustrating!!!) strategies for control tasks:</strong> explored techniques for designing reward functions that guide the agent towards desired behaviors in control environments. even for such a simple task it took a long time to find the sweet spot. failure is a part of the process, and it took many iterations to converge on rewards that did not break every law of physics, while also landing properly.</li>
+      <li><strong>Deep q-learning implementation and optimization:</strong> Gained hands-on experience in implementing deep q-learning algorithms and optimizing their performance through hyperparameter tuning.</li>
+      <li><strong>Hyperparameter tuning and its impact on learning dynamics:</strong> Learned how different hyperparameters influence the learning process, including convergence rates and stability of the learning agent.</li>
+      <li><strong>Batch size effects on gradient estimation and learning stability:</strong> Understood how varying batch sizes affect gradient estimation accuracy and the overall stability of the learning process.</li>
+      <li><strong>Statistical analysis and visualization of experimental results:</strong> Developed skills in analyzing experimental data using statistical methods and presenting findings through effective visualizations.</li>
+      <li><strong>Reward shaping (frustrating!!!) strategies for control tasks:</strong> Explored techniques for designing reward functions that guide the agent towards desired behaviors in control environments. Even for such a simple task it took a long time to find the sweet spot. Failure is a part of the process, and it took many iterations to converge on rewards that did not break every law of physics, while also landing properly.</li>
     </ul>
 
     
