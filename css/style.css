@@ -1164,3 +1164,187 @@ margin-left:5rem;
     min-height: 100vh;
   }
 }
+
+/* nav bar drop down */
+/* Mobile Navigation Styles */
+/* Hamburger Menu Icon */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0.5rem;
+}
+
+.hamburger-line {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #222;
+    margin: 5px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        z-index: 1000;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    /* Hamburger Animation */
+    .hamburger.active .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+}
+
+/* Add to your existing mobile media queries */
+@media (min-width: 769px) {
+    .nav-menu {
+        display: flex !important;
+    }
+}
+
+
+/* Project Detail Pages Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* Project detail layout */
+  .detail-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  /* Image and video containers */
+  .detail-image-container {
+    padding-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .video-container-2 {
+    max-width: 100%;
+    margin: 1rem auto;
+  }
+
+  .video-container-2 video {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Text content */
+  .detail-text {
+    padding: 0 1rem;
+  }
+
+  .detail-text h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Learning sections */
+  .learnings-section,
+  .learnings-section2 {
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  .learnings-section ul,
+  .learnings-section2 ul {
+    columns: 1;
+    padding-left: 1.5rem;
+    margin-left: 0;
+  }
+
+  .learnings-section2 h2 {
+    margin-left: 0;
+  }
+
+  /* PDF icons and links */
+  .pdf-icon {
+    width: 60px;
+    height: 45px;
+  }
+
+  /* Project 0 specific (deep q-learning) */
+  .detail-image-container .video-link2 {
+    margin-bottom: 1rem;
+  }
+
+  /* Project 1 specific (glider) */
+  .detail-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  /* Project 2 specific (bridge) */
+  .detail-text ul {
+    padding-left: 1.5rem;
+  }
+
+  /* Project 3 specific (robot) */
+  .detail-image {
+    border-radius: 4px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .detail-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .learnings-section,
+  .learnings-section2 {
+    padding: 1rem 0;
+  }
+
+  .pdf-icon {
+    width: 50px;
+    height: 38px;
+  }
+
+  .detail-text {
+    padding: 0;
+  }
+}
+
+/* Landscape mode */
+@media (max-height: 500px) and (orientation: landscape) {
+  .detail-content {
+    margin-top: 4rem;
+  }
+
+  .video-container-2 {
+    max-height: 60vh;
+  }
+}
